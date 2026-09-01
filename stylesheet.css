@@ -1,0 +1,25 @@
+body{                                   /*styla bakgrundsfärg*/
+    background-color: darkblue;
+}
+
+form{
+    background-color: antiquewhite;     /*backgrundsfärg och padding*/
+    padding: 20px;
+}
+
+h1, h2, label{
+    font-family: Arial, Helvetica, sans-serif;      /*typsnitt för samtlig text*/
+}
+
+h1{
+    color: white;                       /*textfärg för huvudrubrik*/
+}
+
+label{
+    display: inline-block;                  /*används för att kunna ändra storlek på label*/
+    width: 150px;
+}
+
+input[type="submit"]{                           /*flyttar skicka knappen mer åt höger*/
+    margin-left: 20px;
+}

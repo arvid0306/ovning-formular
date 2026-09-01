@@ -3,9 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <title>Formulär</title>
 </head>
 <body>
-    
+    <header>
+    <h1>Formulär</h1>                                                 <!--rubrik-->
+    </header>
+    <form action="tack.html" method="get">                             <!--skapa formulär, skickas med get då post strular eftersom infon inte skickas via URL-->
+        <label>                                                         <!--textbeskrivning för input-->
+            Mail: 
+            <input type="email" id="email" name="email">                <!--input för mail i form av text-->
+        </label>
+        <br>                                                            <!--radbrytning-->
+        <br>
+        <label>
+            Lösenord: 
+            <input type="password" id="pwd" name="pwd">                 <!--input för lösenord i form av text täckta av *-->
+        </label>
+        <br>
+        <br>
+        <h2>Vilken är din dominanta hand?</h2>                          <!--frågerubrik-->
+        <label>
+            <input type="radio" name="parti" value="right">             <!--input val i form av radioknapp-->
+            Högerhänt
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="parti" value="left">              <!--input val i form av radioknapp-->
+            Vänsterhänt
+        </label>
+        <br>
+        <br>
+        <h2>Vad skulle du säga att din längd är?</h2>
+        <label>
+            <select id="height" name="height">                          <!--dropmeny med olika valmöjligheter-->
+                <option value="">Välj din längd</option>                <!--valet som väljs automatiskt som fungerar som info för att man ska veta vad man ska svara-->
+                <option value="">Kort</option>                          <!--första "riktiga valet"-->
+                <option value="">Medel</option>
+                <option value="">Lång</option>
+            </select>
+        </label>
+        <h2>Intressen: </h2>                                            <!--frågerubrik-->
+        <label>
+            <input type="checkbox" name="parti" value="mat">            <!--val av intresse, i detta fall checkbox vilket gör att man kan välja flera alternativ-->
+            Mat
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="parti" value="sport">
+            Sport
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="parti" value="musik">
+            Musik
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="parti" value="konst">
+            Konst
+        </label>
+        <br>
+        <br>
+        <label>
+            Lägg till ditt personliga brev:
+            <input type="file" name="file">                           <!--möjlighet att lägga till en fil till formuläret-->
+        </label>
+        <br>
+        <br>
+        <label>
+            Födelsedag                                               
+            <input type="date" name="date">                           <!--val av datum, i detta fall personens födelsedag-->
+        </label>
+        <br>
+        <br>
+        <label>
+            Övrigt:
+            <textarea id="other" name="other"></textarea>             <!--öppen textbox för att skriva in valfri övrig info-->
+        </label>
+        <br>
+        <br>
+        <label>
+            <input type="submit" value="Skicka">                      <!--knapp för att skicka formuläret, i detta fall som "get" då github strulade med post eftersom svaren inte skrevs in i URL-->
+        </label>
+    </form>
 </body>
 </html>
